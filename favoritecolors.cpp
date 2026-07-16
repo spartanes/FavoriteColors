@@ -3,7 +3,8 @@
 
 int main()
 {
-	FavoriteColors myColors;
+	FavoriteColors* myColors = FavoriteColors::getInstance();
+	myColors->FavoriteColors;
 
 	int colorsInput = 0;
 	do {
