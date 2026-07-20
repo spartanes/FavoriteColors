@@ -3,6 +3,14 @@
 
 class FavoriteColors {
 public:
+	static FavoriteColors* getInstance() {
+		if (instance == nullptr) 
+		{
+			instance = new FavoriteColors();
+		}
+		return instance;
+	}
+
 	void AddColors();
 	void RemoveColors();
 
@@ -10,5 +18,7 @@ public:
 		return favoriteColors;
 	}
 private:
-	unsigned int favoriteColors = 0;
+	static FavoriteColors* instance;
+	FavoriteColors() = default;
+	unsigned int favoritecolors = 0;
 };
