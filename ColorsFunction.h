@@ -10,6 +10,8 @@ public:
 		}
 		return instance;
 	}
+	FavoriteColors(const FavoriteColors&) = delete;
+	FavoriteColors& operator = (const FavoriteColors&) = delete;
 
 	void AddColors();
 	void RemoveColors();
